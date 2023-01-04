@@ -10,5 +10,7 @@ export default {
 } as ComponentMeta<typeof Button>;
 
 export const Render = (): React.ReactElement => (
-    <Button intent={"primary"} size="medium" />
+    <Button intent={"primary"} size="medium">
+        Test button
+    </Button>
 );

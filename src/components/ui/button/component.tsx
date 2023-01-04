@@ -1,7 +1,7 @@
 import { cva, VariantProps } from "class-variance-authority";
 import React, { ReactElement } from "react";
 
-export type ButtonProps = VariantProps<typeof button> & { children: string };
+export type ButtonProps = VariantProps<typeof button> & { children?: string };
 export const button = cva(["font-semibold", "border", "rounded"], {
     variants: {
         intent: {

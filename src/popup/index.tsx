@@ -12,11 +12,18 @@ const queryClient = new QueryClient();
 const App = () => {
     return (
         <QueryClientProvider client={queryClient}>
-            <Popup />
+            <div className="popupContainer">
+                <Popup />
+            </div>
         </QueryClientProvider>
     );
 };
 
 browser.tabs.query({ active: true, currentWindow: true }).then(() => {
-    ReactDOM.render(<App />, document.getElementById("popup"));
+    ReactDOM.render(
+        <div id="popup">
+            <App />{" "}
+        </div>,
+        document.getElementById("popup"),
+    );
 });
